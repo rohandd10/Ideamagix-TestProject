@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Test Project</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <div class="contents">
+
+            <!-- Top Menubar -->
+
+            <div class="menubar">
+                <div>
+                    <img src="./media/hospital-logo1.png" width="200" height="50" alt="logo1"/>
+                </div>
+                <div class="logo2">
+                    <img src="./media/hospital-logo2.jpg" width="50" height="50" alt="logo2"/>
+                </div>
+
+                <div class="containerMenubar">
+                    <div class="menubarConnect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-person-video3" viewBox="0 0 16 16">
+                            <path d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-6 5.7c0 .8.8.8.8.8h6.4s.8 0 .8-.8-.8-3.2-4-3.2-4 2.4-4 3.2Z"/>
+                            <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5.243c.122-.326.295-.668.526-1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.81c.353.23.656.496.91.783.059-.187.09-.386.09-.593V4a2 2 0 0 0-2-2H2Z"/>
+                        </svg>
+                        <div>
+                            <h6 style="font-weight:lighter; margin: 0;">Second Medical Opinion</h6>
+                            <h5 style="font-weight:bold; margin: 0;">Book Consultation</h5>
+                        </div>
+                    </div>
+                    <div class="menubarConnect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                        </svg>
+                        <div>
+                            <h6 style="font-weight:lighter; margin: 0;">Call us On</h6>
+                            <h5 style="font-weight:bold; margin: 0;">9876543210</h5>
+                        </div>
+                    </div>
+                    <div class="menubarConnect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                            <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
+                            <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"/>
+                        </svg>
+                        <div>
+                            <h6 style="font-weight:lighter; margin: 0;">E-mail us On</h6>
+                            <h5 style="font-weight:bold; margin: 0;">info@metropolition.com</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <select id="languageSelector">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <!-- Add more language options as needed -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Top NavBar 1 -->
+
+            <div class="navbar">
+                <div class="navbarNavs">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Treatments +</a>
+                    <a href="#">Destination +</a>
+                    <a href="#">Hoospitals</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Request a Quote</a>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <!-- Top Banner -->
+
+            <div class="bgWrapperr">
+                <div class="bgContent">
+                    <img src="./media/bg-main.jpg" alt="bg-main">
+                    <div class="bgText">
+                        <h6 style="font-weight: 500;">
+                            Home
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f02655" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                            Treatements
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f02655" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                            Orthopediacs
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f02655" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                            Knee Replacements
+                        </h6>
+                        <h1 style="font-weight: 700;">Total Knee Replacement</h1>
+                        <p>Total Knee replacement is a surgery to remove and replace the whole</p>
+                        <p>damaged knee joint with an artificial joint.</p>
+                        <button>Enquire Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top NavBar 2 -->
+
+            <div class="navBar2">
+                <ul class="nav nav-underline" style="gap:30px; color: black;">
+                    <li class="nav-item"><a class="nav-link active" href="#">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Eligibility</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Preparation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Treatement</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Post-Treatement Care</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Recovery Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Patient Stories</a></li>
+                </ul>
+            </div>
+            <hr style="margin: 0;"/>
+
+            <!-- Mid Banner -->
+
+            <div class="bannerContainer">
+                <div class="bannerContainerText">
+                    <h1>Treatement Overview</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                    <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                </div>
+                <div class="bannerContainerImage">
+                    <img src="./media/bg-cardBig.jpg" alt="cardBig">
+                </div>
+            </div>
+
+            <!-- Mid of Page Content -->
+
+            <div class="midPage">
+
+                <!-- Main Body Content Left Side -->
+
+                <div class="midPageLeft">
+                    <div class="midPageLeftText">
+                        <h3>Eligibility For Treatment.</h3>
+                        <p>Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                        </p>
+                        <p>In general, gastric bypass could be a good option if:</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         The BMI (body mass index) is 40 or more</p>
+                        <p></p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         Your BMI is 0 or more with severe weight-felated health conditions like type -2 crabeles and high blood pressure</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         You are willing to make per anent changes in the lifestyle</p>
+                    </div>
+                    <div class="midPageLeftText2">
+                        <h3>Preparation Before Treatement.</h3>
+                        <p>Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                        </p>
+                        <p>In general, gastric bypass could be a good option if:</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         The BMI (body mass index) is 40 or more</p>
+                        <p></p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         Your BMI is 0 or more with severe weight-felated health conditions like type -2 crabeles and high blood pressure</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         You are willing to make per anent changes in the lifestyle</p>
+                    </div>
+                    <div class="midPageLeftText2">
+                        <h3>About Treatment.</h3>
+                        <p>Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                        </p>
+                        <p>In general, gastric bypass could be a good option if:</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         The BMI (body mass index) is 40 or more</p>
+                        <p></p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         Your BMI is 0 or more with severe weight-felated health conditions like type -2 crabeles and high blood pressure</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         You are willing to make per anent changes in the lifestyle</p>
+                    </div>
+                    <div class="midPageLeftText2">
+                        <h3>Post-Treatement Care Treatement<span style="color: red;">.</span></h3>
+                        <p>Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                        </p>
+                        <p>In general, gastric bypass could be a good option if:</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         The BMI (body mass index) is 40 or more</p>
+                        <p></p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         Your BMI is 0 or more with severe weight-felated health conditions like type -2 crabeles and high blood pressure</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         You are willing to make per anent changes in the lifestyle</p>
+                    </div>
+                    <div class="midPageLeftText2">
+                        <h3>Treatement Recovery Tips.</h3>
+                        <p>Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                        </p>
+                        <p>In general, gastric bypass could be a good option if:</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         The BMI (body mass index) is 40 or more</p>
+                        <p></p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         Your BMI is 0 or more with severe weight-felated health conditions like type -2 crabeles and high blood pressure</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="#6ab3f7" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                         You are willing to make per anent changes in the lifestyle</p>
+                    </div>
+
+                    <!-- Used Accordian Here -->
+
+                    <div class="midPageLeftText2">
+                        <h3>Treatement FAQs.</h3>
+                        <div>
+                            <ul class="accordian">
+                                <li>
+                                    <input type="radio" name="accordian" id="first">
+                                    <label for="first">How do I know the clinic I am searching is verified?</label>
+                                    <div class="content">
+                                        <p>
+                                            Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                                        </p>
+                                    </div>
+                                </li><hr/>
+                                <li>
+                                    <input type="radio" name="accordian" id="second">
+                                    <label for="second">How do I share my reports and medical cases with the clinic of my choice?</label>
+                                    <div class="content">
+                                        <p>
+                                            Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                                        </p>
+                                    </div>
+                                </li><hr/>
+                                <li>
+                                    <input type="radio" name="accordian" id="third" checked>
+                                    <label for="third">I can't travel alone so can family members or friend of mine accompany me?</label>
+                                    <div class="content">
+                                        <p>
+                                            Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                                        </p>
+                                    </div>
+                                </li><hr/>
+                                <li>
+                                    <input type="radio" name="accordian" id="fourth">
+                                    <label for="fourth">Can I see my doctor before I decide and what about my post recovery?</label>
+                                    <div class="content">
+                                        <p>
+                                            Ary individual who has tried diet and exercise but failed to lose weight is considered as a good candidate for
+                                            gustic bypass, minogn gust pass are i west los, is not an approprate opton tor coctors
+                                            Based on the overal health and certan medical quotates, the doctor will decide whether you are engrole for gastric bypass or not.
+                                        </p>
+                                    </div>
+                                </li><hr/>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="midPageLeftText3">
+                        <h3 style="margin-bottom: 20px;">Patient Stories & Videos.</h3>
+                        <div class="container">
+                            <div class="row">
+                                <div class="owl-carousel owl-theme">
+                                    <div class="card" style="width: 13.7rem; border-radius:0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Procedure for retinal Detachment</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <img src="./media/patient1.jpg" style="padding: 5%; height: 255px;" class="card-img-top" alt="patient1">
+                                        <div class="card-body" style="display: flex; align-items: center;">
+                                            <img src="./media/profile2.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13.7rem; border-radius: 0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Colonoscopy and Medical Management</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <p style="padding: 3%; height: 235px;">
+                                            Curious which components explicitly require our JavaScript and Popper?
+                                            If you’re at all unsure about the general page structure, keep reading for an example page template.
+                                        </p>
+                                        <div class="card-body" style="display: flex; align-items: center; margin-top: -15px;">
+                                            <img src="./media/profile1.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13.7rem; border-radius:0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Procedure for retinal Detachment</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <img src="./media/patient2.jpg" style="padding: 5%; height: 255px;" class="card-img-top" alt="patient1">
+                                        <div class="card-body" style="display: flex; align-items: center;">
+                                            <img src="./media/profile2.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13.7rem; border-radius:0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Procedure for retinal Detachment</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <img src="./media/patient1.jpg" style="padding: 5%; height: 255px;" class="card-img-top" alt="patient1">
+                                        <div class="card-body" style="display: flex; align-items: center;">
+                                            <img src="./media/profile2.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13.7rem; border-radius: 0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Colonoscopy and Medical Management</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <p style="padding: 3%; height: 235px;">
+                                            Curious which components explicitly require our JavaScript and Popper?
+                                            If you’re at all unsure about the general page structure, keep reading for an example page template.
+                                        </p>
+                                        <div class="card-body" style="display: flex; align-items: center; margin-top: -15px;">
+                                            <img src="./media/profile1.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13.7rem; border-radius:0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Procedure for retinal Detachment</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <img src="./media/patient2.jpg" style="padding: 5%; height: 255px;" class="card-img-top" alt="patient1">
+                                        <div class="card-body" style="display: flex; align-items: center;">
+                                            <img src="./media/profile2.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13.7rem; border-radius:0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Procedure for retinal Detachment</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <img src="./media/patient1.jpg" style="padding: 5%; height: 255px;" class="card-img-top" alt="patient1">
+                                        <div class="card-body" style="display: flex; align-items: center;">
+                                            <img src="./media/profile2.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13.7rem; border-radius: 0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Colonoscopy and Medical Management</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <p style="padding: 3%; height: 235px;">
+                                            Curious which components explicitly require our JavaScript and Popper?
+                                            If you’re at all unsure about the general page structure, keep reading for an example page template.
+                                        </p>
+                                        <div class="card-body" style="display: flex; align-items: center; margin-top: -15px;">
+                                            <img src="./media/profile1.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13.7rem; border-radius:0;">
+                                        <div class="card-body" style="display: flex;">
+                                            <h6 class="card-title">Underwent Procedure for retinal Detachment</h6>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="#fd5c63" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                            </svg>
+                                        </div>
+                                        <img src="./media/patient2.jpg" style="padding: 5%; height: 255px;" class="card-img-top" alt="patient1">
+                                        <div class="card-body" style="display: flex; align-items: center;">
+                                            <img src="./media/profile2.jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                                            <div style="margin-left: 20px;">
+                                                <p class="card-text" style="margin: 0;">Luke Olfert</p>
+                                                <p class="card-text" style="margin: 0;">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Body Content Right Side -->
+
+                <div class="midPageRight">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Need Help?</h2>
+                            <p>Just let us know. We will be happy to asist you.</p>
+                            <input style="margin-bottom: 15px;" type="text" class="form-control" placeholder="Full Name">
+                            <input style="margin-bottom: 15px;" type="text" class="form-control" placeholder="E-mail">
+                            <input style="margin-bottom: 15px;" type="text" class="form-control" placeholder="Phone Number">
+                            <textarea style="margin-bottom: 15px;" class="form-control" placeholder="Describe Your Treatment Requirement" id="textAreaExample" rows="2"></textarea>
+                            <a style="width: 100%; background-color: #41a3fe; color: #fff;" href="#" class="btn">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <---Full Carasoul-1 Line--->
+
+            <div style="background-color: #d9f6fa; padding: 3%;">
+                <p style="text-align: center; color: red;">Doctors</p>
+                <h2 style="text-align: center; margin-bottom: 40px;">Top Orthopaedic <span style="color: #41a3fe;">Doctors</span></h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="owl-carousel owl-theme" style="padding:0 100px; margin-left: 20px;">
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr1.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr2.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr3.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr1.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr2.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr3.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr1.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr2.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem; border-radius:0;">
+                                <img src="./media/dr3.jpg" style="padding: 3%; height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0; color: red;">Dr. Faique Falke</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Musaffah Industrial - Abu Dhabi</h6>
+                                    <h6 class="card-text" style="margin: 0; font-weight: 100;">Doctor Degree & Specialist</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <---Full Carasoul-2 Line--->
+
+            <div style="padding: 2%;">
+                <p style="text-align: center; color: red;">Hospitals</p>
+                <h2 style="text-align: center; margin-bottom: 40px;">Recommended <span style="color: #6ab3f7;">Hospitals</span></h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="owl-carousel owl-theme" style="padding: 0;">
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/apollo.jpg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Apollo Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Bangalore</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/jaslok.jpg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Jaslok Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Mumbai</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/medanta.jpeg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Medanta Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Gurgaon</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/apollo.jpg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Apollo Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Bangalore</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/jaslok.jpg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Jaslok Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Mumbai</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/medanta.jpeg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Medanta Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Gurgaon</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/apollo.jpg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Apollo Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Bangalore</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/jaslok.jpg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Jaslok Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Mumbai</h6>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 21rem; border-radius:0;">
+                                <img src="./media/medanta.jpeg" style="height: 300px;" class="card-img-top" alt="doctors">
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-text" style="margin: 0;">Medanta Hospital</h5>
+                                    <h6 class="card-text" style="margin: 0; font-weight: bold;">Gurgaon</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin: 30px;">
+                    Don't hesitate, contact us for better help and services. 
+                    <span style="color: red; text-decoration: underline; cursor: pointer;">
+                        <a>Explore All Hospitals</a>
+                    </span>
+                </p>
+            </div>
+
+            <!-- <---Footer Top Line--->
+
+            <div class="bgFooter">
+                <h5>Stay healthy and strong to enjoy life</h5>
+                <h1>We have team of healthcare experts</h1>
+                <br/>
+                <div class="bgFooterText">
+                    <button>Get In Tounch</button>
+                    <div class="vertical"></div>
+                    <h6>+91 9876543210</h6>
+                </div>
+            </div>
+
+            <!-- <---Footer Mid section 1 & 2 Line--->
+
+            <div class="footerMidMain">
+                <div class="footerMid">
+                    <div class="footerMid1">
+                        <div class="footerMid1A">
+                            <h6>Important Links</h6>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Home
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                About Us
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                FAQs
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Blog
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Contact Us
+                            </p>
+                        </div>
+                        <div class="footerMid1A">
+                            <h6>Top Hospitals</h6>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>Apollo Hospital Delhi</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>Medanta Hospital Gurgaon</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>Max Hospital Delhi</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>Jaslok Hospital Mumbai</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>Apollo Hospital Delhi</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>Medanta Hospital Gurgaon</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>View All</p>
+                        </div>
+                        <div class="footerMid1A">
+                            <h6>Speciality Treatements</h6>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Knee Replacement Surgeon
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Urologist
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Spine Surgeon
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                ENT Surgeon
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Orthopedic
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Cardiologist
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                View All
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footerMid1B">
+                        <div class="footerMid1B1">
+                            <div class="footerMid1B11">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#febd69" class="bi bi-person-add" viewBox="0 0 16 16">
+                                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                                    <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+                                </svg>
+                                <div class="footerMid1B111">
+                                    <p>Are you doctor/hospital?</p>
+                                    <h6>Join Metropolitian</h6>
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <p style="margin: 0; font-size: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p style="margin: 0; font-size: 10px;">Proin posuere lacus turpis.</p>
+                            </div>
+                        </div>
+                        <div class="footerMid1A">
+                            <h6>Medical Tourism Destination</h6>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Medical Tourism in India
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Medical Tourism in UAE
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                Medical Tourism in Sri Lanka
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6ab3f7" class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                View All
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <hr style="margin-top: 10px;"/>
+                <div style="padding:10px 50px; display: flex; gap: 20px;">
+                    <img src="./media/hospital-logo.png" alt="hospital" style="width: 30%; height: 40%;">
+                    <div style="width: 50%;">
+                        <h6 style="margin: 0;">About Metropolitan Hospital</h6>
+                        <p style="margin: 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Proin posuere lacus turpis. Mauris iaculis ante ut commodo bibendum.
+                            Aenean eget est nulla. Fusce porttitor odio neque, vitae eleifend ante vehicula eget.
+                            Aliquam erat volutpat. Sed sit amet dictum eros, id sagittis massa.
+                            Donec a sem vehicula, sagittis quam ac, efficitur lacus. Mauris ut rutrum erat.
+                            Nam accumsan mauris ut libero facilisis, in ultrices lorem vestibulum.
+                        </p>
+                    </div>
+                    <div>
+                        <p>Follow Us On</p>
+                        <div style="display: flex; gap: 10px; padding-bottom: 30px;">
+                            <img src="./media/fb.png" alt="fb" width="25" height="25">
+                            <img src="./media/insta.jpg" alt="fb" width="25" height="25">
+                            <img src="./media/twitter.png" alt="fb" width="25" height="25">
+                            <img src="./media//youtube.png" alt="fb" width="25" height="25">
+                        </div>
+                        <p style="margin: 0; padding-bottom: 5px;">Customer Service</p>
+                        <h6 style="color: #6ab3f7;">+91 9876543210</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <---Last Footer Line--->
+
+            <div class="footerLast">
+                <p style="width:70%;">Copyright &copy; Rohan Dhanke. All Rights Reserved. Designed for Ideamagix.</p>
+                <div style="display:flex; gap: 15px;">
+                    <p>Terms and Conditions</p>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+
+            <!-- <---Bootstrap 5--->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+            <!-- <---Owl Carousal--->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                responsive:{
+                    0:{ items:1 },
+                    600:{ items:1 },
+                    1000:{ items:2 },
+                    1250:{ items:3 }
+                }
+            })
+        </script>
+
+            <!-- <---Font Awesome Kit--->
+        <script src="https://kit.fontawesome.com/32cd5c3935.js" crossorigin="anonymous"></script>
+
+        <script>
+            window.onload = function() {
+                // Hide the loader
+                document.querySelector('.loader').style.display = 'none';
+
+                // Show the content
+                document.querySelector('.contents').style.display = 'block';
+            };
+        </script>
+
+    </body>
+</html>
